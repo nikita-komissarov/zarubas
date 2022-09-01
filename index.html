@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Nikita Komissarov</title>
+	<meta name="description" content="Хеширование строк или файлов. Поиск исходных строк по хешам MD5, SHA1 и CRC32" />
+  <meta name="keywords" content="" />
+  <meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+</head>
+<body>
+	<div class="container">
+		<div class="row mt-5 mb-3">
+			<div class="col-12">
+				<div class="input-group">
+					<form class="w-100" id="form-input">
+						<div class="input-group mb-3">
+							<button class="btn btn-outline-secondary" type="button" id="btn-file-input">
+								<span class="d-none d-md-block">Выбрать файл</span>
+								<span class="d-md-none">📎</span>
+							</button>
+							<input type="file" id="file-input" hidden>
+				  		<input type="text" id="text-input" class="form-control" placeholder="Введите текст здесь">
+				  		<button class="btn btn-success" type="submit">Вычислить хеш</button>
+				  	</div>
+				  </form>
+				</div>
+			</div>
+		</div>
+		<div class="row mb-3">
+			<div class="col-12">
+				<table class="table table-bordered table-striped" id="table-results">
+					<thead>
+						<tr>
+							<th width="20%">Алгоритм</th>
+							<th>Результат</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td colspan="2" class="text-center text-muted">Пусто</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12">
+				<div class="d-grid">
+					<button class="btn btn-outline-secondary" id="btn-hash-find">Обратное хеширование</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/main.js"></script>
+</html>
